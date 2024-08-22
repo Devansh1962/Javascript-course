@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listener</title>
+</head>
+<body>
+
+    <button id="my-button"> click me</button>
+
+    <script>
+        let buttonElment = document.querySelector(`#my-button`);
+
+        let buttonMsg = event => console.log('Display massege');
+        // addevent listener
+        buttonElment.addEventListener('grow' , buttonMsg );
+
+        let printDte = event => console.log(new Date());
+
+        buttonElment.addEventListener('click' , printDte);
+
+        // remove event listener
+        buttonElment.removeEventListener('click' , buttonMsg);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // create function
+        let age = 23;
+        function printAge(){
+
+            console.log(`Your age is ${age}`);
+            // let sum = x + y;
+            // let multiply = x * y;
+            // let divide = x / y;
+            // return;
+        }
+
+         printAge();
+          age = 45
+          printAge();
+          age = 67;
+          printAge();
+
+
+        //   Return statment
+
+        function num( x , y){
+            let sum = x + y;
+            return sum;
+            // let multiply = x * y;
+            // return multiply;
+            // let divide = x / y;
+            // return divide;
+            
+
+        }
+        console.log(num(4 , 6));
+        console.log(num(6 , 6));
+
+
+        function greed(name = 'payre'){
+            console.log(`Namaste ${name} uncle`)
+        }
+
+        greed('Titu')       
+
+    </script>
+</body>
+</html>

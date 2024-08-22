@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PracticSet</title>
+</head>
+<body>
+<script>
+    
+    let p = {num:5};
+    let q = p;
+    let x = p;
+    console.log(`p=${p.num}, q=${q.num}, x=${x.num}`);
+
+    q.num = 8;
+    console.log(`p=${p.num}, q=${q.num}, x=${x.num}`);
+
+   
+
+    let stats = {
+        msg : 'good job',
+        status : 'complete',
+
+        // let y = ['msg'];
+    }
+
+    console.log(stats)
+    // de-structuring
+    let {msg , status} = stats;
+    console.log(msg);
+    console.log(status);
+
+//     function isEven(num) {
+//   return num % 2 === 0;
+// }
+
+// compare twq product
+
+let product = {
+    name : 'Shirt',
+    Size : 'M',
+    fit : 'Slime-fit',
+    itemQualti : 'Cotton',
+}
+
+let product2 = {
+    name : 'Shirt',
+    Size : 'XLL',
+    fit : 'Slime-fit',
+    itemQualti : 'MixCotton',
+}
+
+
+let product3 = {
+    name : 'Shirt',
+    Size : 'M',
+    fit : 'Slime-fit',
+    itemQualti : 'Cotton',
+}
+
+function compareProduct ( product1 , product2){
+
+    if(product1 !== 'object' || product2 !== 'object'){
+        console.warn('Parameter passed was not object');
+        return false;
+    }
+
+    if(product1 == product2){
+        return true;
+    }
+
+    if(product1.name === product2.name && 
+       product1.Size === product2.Size && 
+       product1.fit === product2.fit && 
+       product1.itemQualti  === product2.itemQualti){
+
+        return true;
+
+    }else{
+        return false;
+    }
+
+    // console.log(compareProduct(product, ''));
+    // console.log(compareProduct(product, product));
+    // console.log(compareProduct(product2, product3));
+    // console.log(compareProduct(product, product2));
+    // console.log(compareProduct(product3, product2));
+    // console.log(compareProduct(product, product3));
+}
+
+    console.log(compareProduct(product, ''));
+    console.log(compareProduct(product, product3));
+    console.log(compareProduct(product2, product3));
+    console.log(compareProduct(product, product2));
+    console.log(compareProduct(product3, product2));
+    console.log(compareProduct(product2, product2));
+    
+</script>
+</body>
+</html>

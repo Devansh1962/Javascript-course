@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+
+    <script>
+        // create object
+        // let product = {
+        //     company : 'Mango',
+        //     price : 899,
+        //     itemName : 'T-Shirt',
+        // }
+        // console.log(typeof(product));
+        // console.log(product);
+        // // indisual accsec
+        // console.log(product.company);
+        // console.log(product.price);
+        // console.log(product.itemName);
+
+        // value change
+        // product.price = 999;
+        // product.itemName = 'Shirt';
+
+        // console.log(product.price);
+        // console.log(product.itemName);
+
+        // // value deleat
+
+        // delete product.company;
+        // console.log(product);
+        
+        let product = {
+            company : 'Mango',
+            price : 899,
+            itemName : 'T-Shirt',
+
+            displayPrice: function(){
+                console.log(`Price of the priduct is ${this.price}`);
+            }
+
+            
+        };
+
+        product.displayPrice();
+
+
+        // Autoboxing
+
+        console.log('This is SIRI'.length);
+        console.log('This is SIRI'.toUpperCase());
+        console.log('This is SIRI'.replace('SIRI', 'Harry'));
+
+
+        // object reference
+
+        let a = 8;
+        let b = a;
+        console.log(`a=${a}, b=${b}`);
+        a = 10;
+        console.log(`a=${a}, b=${b}`);
+      
+        //  object
+        let x = {num:5};
+        let y = x;
+        console.log(`x=${x.num}, y=${y.num}`);
+
+        x.num = 7;
+        console.log(`x=${x.num}, y=${y.num}`);
+
+        y.num = 11;
+
+        console.log(`x=${x.num}, y=${y.num}`);
+
+
+        let p = {pop: 'siri'};
+        let q = {pop: 'siri'};
+        console.log(p == q);
+        console.log(p === q);
+        console.log(p.pop == q.pop);
+
+
+      
+
+        
+        
+
+        
+
+    </script>
+    
+</body>
+</html>

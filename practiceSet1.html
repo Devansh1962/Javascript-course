@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practiceSEt</title>
+
+    <style>
+        #greed{
+            color: rgb(14, 139, 14);
+        }
+
+        #press{
+            height: 50px;
+            width:50px;
+            font-size: 25px;
+            font-weight: 700;
+            border: none;
+        }
+
+        .js-odd{
+            background-color: chartreuse;
+        }
+        .js-even{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 id = greed></h1>
+
+    <button id="press" onclick="pressButton();"></button>
+
+
+    <script>
+        let countNo = localStorage.getItem(`countNo`) || 0; 
+        //  countNo = 0;
+        function pressButton(){
+           countNo++;
+           localStorage.setItem('countNo', countNo);
+           updateButton();
+
+           
+        }
+
+         function updateButton(){
+            let button = document.querySelector(`#press`);
+
+           if(countNo % 2 === 0){
+            button.classList.remove('js-odd');
+            button.classList.add('js-even');
+           
+          }else{
+            button.classList.remove('js-even');
+            button.classList.add('js-odd');
+           }
+            
+           button.innerHTML = countNo;
+         }
+
+         updateButton();
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let time = new Date();
+
+        let heading = document.querySelector(`#greed`);
+
+        if(time.getHours() < 12){
+            heading.innerHTML = 'Good Morning BHAI !!!';
+
+        }
+
+        else if(time.getHours() < 18){
+            heading.innerHTML = 'Good AfterNoon BHAI LOG !!';
+        }
+
+        else if(time.getHours() < 23){
+            heading.innerHTML = 'Good Evening BHAI LOG !!';
+        }
+
+
+        else{
+            heading.innerHTML = 'Good Night BHAI log !!';
+        }
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set</title>
+</head>
+<body>
+
+    <script>
+        let age = 40;
+        let gender = 'Females';
+        let resultMsg;
+        
+        if(age <= 5){
+          resultMsg = 'Metro ticket  are free';
+
+        }
+
+        else if (gender === 'Females'){
+            resultMsg = '50% discount Metro tiket';
+        }
+
+        
+        else if(age <= 8){
+            resultMsg = '50% discount Metro ticket';
+        }
+
+        else if(age >= 65){
+            resultMsg= 'Only pay 30% of the ticket';
+        }else{
+            resultMsg = 'No any discount'
+        }
+
+
+
+
+        
+
+
+        console.log(resultMsg);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practices</title>
+</head>
+<body>
+
+    <script>
+        // let arr = [5,6,7,6];
+        // arr.push(7);
+        // arr.unshift(4);
+        // console.log(arr);
+
+        // for(let i=0; i<arr.length;i++){
+        //     if(arr[i] === 6){
+        //         // return ` arr elment index position ${i} `
+        //         console.log(`arr elment index position ${i}`);
+        //     }
+        //     //  console.log(`arr elment index position ${i}`)
+        // }
+
+        // reverse num 
+
+        for(let i = 10; i > 0; i--){
+            console.log(i);
+        }
+
+        // only positive num print 
+
+        // let num  = [1 , -6 , 7 , 5 , -9 ,8]
+        // for(let i = 0; i< num.length; i++){
+        //     if(num[i] > 0){
+        //         console.log(num[i]);
+        //         continue;
+        //     }
+        // }
+         
+        // create arr copy using slice method
+        // function copyelment(arr){
+        //   return  arr.slice(0,arr.length);
+        // }
+        // let arr = [2,3,4,56];
+        // console.log(copyelment(arr));
+
+        // find five prime NO 
+
+        function isPrime(num){
+            for(let i  = 2; i < num; i++){
+                if(num % i === 0){
+                    return false;
+
+                }
+            }
+            return true;
+
+        }
+
+        let num = 2;
+        let i = 0;
+        while(i < 5){
+            if(isPrime(num)){
+            console.log(num);
+            i++;
+            }
+            num++;
+
+        }
+
+
+        let a  = ['kaha', 'ho','bhai'];
+        // let reult;
+        // for(let i = 0; i<a.length; i++){
+        //     reult += a[i];
+        //     console.log(reult);
+
+        // }
+        console.log(a.join(" "))
+
+
+        
+         
+
+    </script>
+    
+</body>
+</html>

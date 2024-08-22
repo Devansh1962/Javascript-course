@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set time</title>
+</head>
+<body>
+
+    <script>
+        // setTimeout
+
+        let alarm = () => console.log(`SUBAH HO GAI UTH JAO!!! ${new Date()}`);
+
+    //    let timerId = setTimeout(alarm , 5000);
+        // console.log('without timer set');
+        // console.log(`set timer ID ${timerId}`);
+
+        // setTimeout cancale karna 
+        // clearTimeout(timerId);
+
+        // srtInterval : har kuchh time baad excute hoga 
+
+          let intervalId = setInterval(alarm , 2000 );
+         
+        setTimeout( () => clearInterval(intervalId) , 10000);
+
+
+
+    </script>
+    
+</body>
+</html>
